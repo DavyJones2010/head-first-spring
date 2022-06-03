@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class FilterB implements Filter {
     @Override
-    @Perf
+//    @Perf
     public void doFilter() {
         System.out.println("FilterB");
     }
