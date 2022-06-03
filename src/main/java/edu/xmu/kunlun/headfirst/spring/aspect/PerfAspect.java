@@ -14,13 +14,13 @@ public class PerfAspect {
     @Around("@annotation(Perf)")
     public Object perf(ProceedingJoinPoint joinPoint) throws Throwable {
         long start = System.currentTimeMillis();
-
-        System.out.println("Start");
+        String methodName = joinPoint.getSignature().getName();
+        System.out.println(methodName + " start");
         Object o = null;
         try {
             o = joinPoint.proceed();
         } finally {
-            System.out.println("Finished cost: " + (System.currentTimeMillis() - start));
+            System.out.println(methodName + " finished cost: " + (System.currentTimeMillis() - start));
         }
         return o;
     }
