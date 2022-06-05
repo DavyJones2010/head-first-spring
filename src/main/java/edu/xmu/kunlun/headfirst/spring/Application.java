@@ -1,6 +1,7 @@
 package edu.xmu.kunlun.headfirst.spring;
 
 import edu.xmu.kunlun.headfirst.spring.service.impl.FilterChain;
+import edu.xmu.kunlun.headfirst.spring.service.impl.UserSvc;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
